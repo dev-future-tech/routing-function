@@ -1,0 +1,4 @@
+name: transform-route-function
+description: |
+  Takes a message, transforms it and re-routes it
+functionClass: com.example.functions.TransformRouteFunction

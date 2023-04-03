@@ -1,0 +1,16 @@
+tenant: "my-tenant"
+namespace: "my-namespace"
+name: "routing-function"
+className: "com.ikeda.pulsar.functions.TransformRouteFunction"
+inputs: ["persistent://my-tenant/my-namespace/dbserver1.public.person"]
+userConfig:
+  PublishPersonTopic: "persistent://my-tenant/my-namespace/person-transform"
+  TransformPerson : "$.schema"
+  PublishCompanyTopic : "persistent://my-tenant/my-namespace/dbserver1.public.company"
+output: "persistent://test/test-namespace/groceries"
+autoAck: true
+parallelism: 1
+
+inputSpecs:
+  "persistent://my-tenant/my-namespace/dbserver1.public.person":
+    typeClassName: "io.debezium.serde.DebeziumSerdes"

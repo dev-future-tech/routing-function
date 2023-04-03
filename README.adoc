@@ -1,0 +1,8 @@
+= Transform Routing Function
+:author: Anthony Ikeda <anthony.ikeda@gmail.com>
+:toc:
+:version-label: 0.0.1-SNAPSHOT
+
+== Set up
+
+NOTE: This functon takes input routes and performs basic transforms on them. Input should be formed in JSON, a path to the extract item defined (JSONPath) and
